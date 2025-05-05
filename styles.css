@@ -93,3 +93,21 @@ section {
     transform: rotate(1180deg)
 }
 
+.experiment2 {
+    background-color: blue;
+    height: 120px;
+    width: 400px;
+    animation-name: experiment2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes experiment2 {
+    from {background-color: black;}
+    to {background-color: yellow;
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+}
