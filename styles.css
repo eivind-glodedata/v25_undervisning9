@@ -1,0 +1,95 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideFromLeft {
+ width: 300px;
+ height: 300px;
+ background-color: red;
+
+ animation-name: slideFromLeft;
+ animation-duration: 1s;
+ animation-timing-function: ease-in;
+ animation-iteration-count: 1;
+ animation-fill-mode: forwards;
+}
+
+.slideFromRight {
+ width: 300px;
+ height: 300px;
+ background-color: green;
+
+ animation: slideFromRight 0.3s ease-in 1s 1 forwards;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(1000px)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+.colorSwitch {
+    background-color: violet;
+
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.colorSwitch:hover, .colorSwitch:active {
+    background-color: chartreuse;
+}
+
+.makeBigger {
+    scale: 1;
+    transition: 2s ease-in;
+}
+
+.makeBigger:hover, .makeBigger:active {
+    scale: 0.8;
+}
+
+.changeOpacity {
+    opacity: 1;
+    transition: 2s ease-out;
+}
+
+.changeOpacity:hover, .changeOpacity:active {
+    opacity: 0.5;
+}
+
+.experiment {
+    background-color: brown;
+    height: 100px;
+    width: 500px;
+    transition: width 2s, height 4s, transform 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 10ms;
+}
+
+.experiment:hover {
+    width: 100px;
+    height: 200px;
+    transform: rotate(1180deg)
+}
+
